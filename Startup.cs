@@ -30,6 +30,8 @@ namespace SLACalculation
             // Connection
             services.AddDbContext<SLACalcContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("SLACalcDbConnection")));
+
+            services.AddTransient<SLACalcContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
